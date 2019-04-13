@@ -1,8 +1,0 @@
-clear;
-m_mu=0;
-sigma_mu=1;
-n=1000000;
-x=-4:0.05:4;
-p=(1/sqrt(2*pi)*sigma_mu)*exp(-(x-m_mu).^2/2*sigma_mu^2);
-check=trapz(x,p)
-plot(x,p,'r');
