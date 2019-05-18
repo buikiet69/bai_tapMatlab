@@ -1,0 +1,20 @@
+clear;
+load ex5p1_Res;
+
+Es = var(S);
+Eb = Es/2;
+SNR_db = 6;
+N_0 = Eb/10^(SNR_db/10);
+N = sqrt(N_0/2)*(randn(size(S))+j*randn(size(S)));
+R = S + N;
+plot(R,'.');
+hold on;
+plot(S,'k*');
+hold on;
+t = 0:0.01:2*pi;
+plot(exp(j*t),'k--');
+title('The complex signal-space diagram of 4-QPSK');
+xlabel('I');
+ylabel('Q');
+legend('S_m','S');
+hold off;
